@@ -8,6 +8,9 @@ poeApp.controller("NextRaceCtrl", function($scope, $http, $routeParams) {
 	/*
 	 * Entry point of the controller.
 	 */
+	if ($routeParams.race_id == undefined) {
+	    return ;
+	}
 	$scope.fetch_datas();
     };
 
@@ -57,6 +60,8 @@ poeApp.controller("NextRaceCtrl", function($scope, $http, $routeParams) {
 	    $scope.races = $scope.datas.calendar;
 	} else {
 	    $scope.races = [$scope.datas.calendar[$scope.race_id]];
+	    $scope.next_id = parseInt($scope.race_id) + 1;
+	    $scope.prev_id = parseInt($scope.race_id) - 1;
 	}
     };
 

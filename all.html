@@ -1,9 +1,26 @@
-<h1>{{ datas.infos.id }}</h1>
+<div class="masthead clearfix">
+  <div class="inner">
+    <h3 class="masthead-brand">NextRace</h3>
+    <ul class="nav masthead-nav">
+      <li><a ng-href="#/0">First Race</a></li>
+      <li><a href="#/{{ prev_id }}">Previous</a></li>
+      <li><a href="#/{{ next_id }}">Next</a></li>
+    </ul>
+  </div>
+</div>
 
-<ul>
-  <li ng-repeat="race in races">
-    <a ng-href="{{ race.url }}">{{ race.id }}</a><br>
-    {{ race.startAt }}<br>
-    {{ race.endAt }}<br>
-  </li>
-</ul>
+<div class="inner cover">
+  <div id="error">{{ error }}</div>
+  <h1 class="cover-heading">{{ datas.infos.id }}</h1>
+  <p ng-repeat="race in races" class="lead">
+    <a ng-href="{{ race.url }}">{{ race.id }}</a><br />
+    {{ race.startAt }}<br />
+    {{ race.endAt }}<br />
+  </p>
+</div>
+
+<div class="mastfoot">
+  <div class="inner">
+    <p><a href="" ng-click="refresh()">Refresh</a></p>
+  </div>
+</div>

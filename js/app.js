@@ -12,6 +12,6 @@ poeApp.config(function($routeProvider) {
 	    controller: "NextRaceCtrl"
 	})
 	.otherwise({
-	    redirectTo: "/all"
+	    redirectTo: "/0"
 	});
 });
