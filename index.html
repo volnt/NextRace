@@ -1,0 +1,24 @@
+<html ng-app="poeApp">
+  <head>
+  </head>
+  <body ng-controller="NextRaceCtrl">
+
+    <ul class="nav">
+      <li><a href="#/all">All Races</a></li>
+      <li><a ng-href="#/{{ next }}">Next Race</a></li>
+      <li><a ng-href="#/{{ prev }}">Prev Race</a></li>
+      <li><a ng-href="#/0">First Race</a></li>
+      <li><a href="" ng-click="refresh()">Refresh</a></li>
+    </ul>
+
+    <div id="error">{{ error }}</div>
+
+    <div ng-view></div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+  </body>
+</html>

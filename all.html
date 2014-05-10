@@ -1,0 +1,9 @@
+<h1>{{ datas.infos.id }}</h1>
+
+<ul>
+  <li ng-repeat="race in races">
+    <a ng-href="{{ race.url }}">{{ race.id }}</a><br>
+    {{ race.startAt }}<br>
+    {{ race.endAt }}<br>
+  </li>
+</ul>
