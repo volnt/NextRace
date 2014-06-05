@@ -59,9 +59,11 @@ poeApp.controller("NextRaceCtrl", function($scope, $http, $routeParams) {
 	if ($scope.race_id == "all") {
 	    $scope.races = $scope.datas.calendar;
 	} else {
+	    var int_race_id = parseInt($scope.race_id);
+
 	    $scope.races = [$scope.datas.calendar[$scope.race_id]];
-	    $scope.next_id = parseInt($scope.race_id) + 1;
-	    $scope.prev_id = parseInt($scope.race_id) - 1;
+	    $scope.next_id = int_race_id < $scope.datas.calendar ? int_race_id + 1 : int_race_id;
+	    $scope.prev_id = int_race_id > 0 ? int_race_id - 1 : int_race_id;
 	}
     };
 
