@@ -18,3 +18,9 @@ For now the webapp can :
 * Refresh the stored races
 
 I would like to add some functionnalities but the fact that it is much slower than the native app demotivates me.
+
+# Run
+
+You can't just open the index.html in your browser, you have to launch a HTTP server for the app to work.
+
+For example `python -m SimpleHTTPServer` should launch an HTTP server on http://localhost:8000.
